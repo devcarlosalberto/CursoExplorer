@@ -1,0 +1,269 @@
+:root {
+    --background-primary-color: #BFD7E4;
+    --background-secondary-color: #293241;
+
+    --background-input-color: #FAFAFC;
+
+    --color-primary: #F67669;
+    --color-secondary: #253B51;
+
+    --background-button-hover: #a04439;
+
+    --color-text: #4E4958;
+    --color-text-gray: #C1BCCC;
+
+    --background-border: #E6E6F0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--background-primary-color);
+}
+
+body::before {
+    content: '';
+
+    width: 100%;
+    height: 465px;
+
+    background: var(--background-secondary-color);
+    
+    position: absolute;
+    z-index: -1;
+}
+
+.page {
+    width: 750px;
+
+    margin: 0 auto;
+}
+
+.page > header {
+    text-align: center;
+
+    padding: 107px 0px 31px;
+}
+
+.page > header > h1 {
+    font-family: 'Staatliches';
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 45px;
+    color: white;
+}
+
+.page > header > p {
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: white;
+
+    margin-bottom: 21px;
+}
+
+form {
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+
+    margin-bottom: 392px;
+
+    background: #FFFFFF;
+}
+
+form > header {
+    height: 133px;
+
+    text-align: center;
+
+    padding: 50px 0;
+
+    background: var(--color-primary);
+}
+
+form > header > h2 {
+    font-family: 'Staatliches';
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 34px;
+    color: white;
+}
+
+.group-input {
+    border: none;
+
+    display: flex;
+    flex-direction: column;
+    gap: 31px;
+
+    padding: 0 64px;
+}
+
+form .group-input:nth-child(2) {
+    gap: 19px;
+}
+
+.fieldset-wrapper > legend {
+    font-family: 'Staatliches';
+    font-size: 24px;
+    text-align: center;
+    color: var(--color-secondary);
+}
+
+.fieldset-wrapper > legend::after {
+    content: '';
+
+    width: 100%;
+
+    display: block;
+
+    margin-top: 8px;
+
+    border-bottom: 1px solid var(--background-border);
+}
+
+.row {
+    display: flex;
+
+    gap: 22px;
+}
+
+.input-wrapper {
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: var(--color-text);
+
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+}
+
+.input-wrapper > label {
+    margin-bottom: 8px;
+}
+
+.input-wrapper > label > span {
+    color: var(--color-text-gray);
+
+    margin-left: 9px;
+}
+
+.input-wrapper input,
+.input-wrapper select,
+.input-wrapper textarea {
+    height: 55px;
+
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: var(--color-text);
+
+    padding: 0 15px;
+
+    border: 1px solid var(--background-border);
+    border-radius: 8px;
+
+    background-color: var(--background-input-color);
+}
+
+.input-wrapper textarea {
+    height: 166px;
+
+    padding: 15px;
+}
+
+.input-md {
+    width: 300px;
+}
+
+.checkbox-wrapper {
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--color-text);
+}
+
+.checkbox-wrapper input {
+    position: absolute;
+    z-index: -1;
+
+    width: 24px;
+    height: 24px;
+}
+
+.checkbox-wrapper input:focus + label::before {
+    outline: 2px solid black;
+}
+
+.checkbox-wrapper input:checked + label::before {
+    background-image: url("data:image/svg+xml,%3Csvg width='18' height='14' viewBox='0 0 18 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 11.17L1.83 7L0.410004 8.41L6 14L18 2L16.59 0.589996L6 11.17Z' fill='%2342D3FF'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.checkbox-wrapper label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.checkbox-wrapper label::before {
+    content: '';
+
+    display: block;
+
+    width: 24px;
+    height: 24px;
+
+    border: 1px solid var(--background-border);
+    border-radius: 8px;
+
+    background: var(--background-input-color);
+}
+
+.time-inputs {
+    display: flex;
+    gap: 10px;
+}
+
+.time-inputs div {
+    width: 140px;
+}
+
+.button {
+    font-family: 'Staatliches';
+    font-size: 20px;
+    font-weight: 400;
+    color: white;
+
+    width: 622px;
+
+    margin: 28px auto 64px;
+
+    padding: 15px 40px;
+
+    border: none;
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    background: var(--color-primary);
+}
+
+.button:hover {
+    background: var(--background-button-hover);
+}
